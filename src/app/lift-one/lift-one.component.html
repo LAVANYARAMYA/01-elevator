@@ -1,16 +1,33 @@
+<div class="ele-system">
 <div class="Currentfloor" >
-<button [style.padding]="200" >Down</button>
+<button [style.padding]="200"  (click)="goToFloor(4)">Down</button>
 
 <div class="first" [style.flex-direction]="">
-<button [style.padding]="200">Up</button>
-<button [style.padding]="200">Down</button>
+<button [style.padding]="200" (click)="goToFloor(3)">Up</button>
+<button [style.padding]="200" (click)="goToFloor(3)">Down</button>
 </div>
 
 
 <div class="first" [style.flex-direction]="">
-<button [style.padding]="200">Up</button>
-<button [style.padding]="200">Down</button>
+<button [style.padding]="200" (click)="goToFloor(2)">Up</button>
+<button [style.padding]="200" (click)="goToFloor(2)">Down</button>
 </div>
 
-<button [style.padding]="200">Up</button>
+<button [style.padding]="200" (click)="goToFloor(1)">Up</button>
 </div>
+
+<div class="elevator" >
+    <div class="elevator-box">
+    
+        <!-- <input type="number" [(ngModel)]="currentFloor" min="0" max="10" step="1"> -->
+      <div  class="floor-indicator" [style.bottom.px]="currentFloor*25">
+       
+        {{ currentFloor }}
+        <app-door-open-close></app-door-open-close>
+      </div>
+
+    </div>
+  </div>
+
+
+

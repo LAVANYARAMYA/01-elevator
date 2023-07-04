@@ -1,16 +1,12 @@
 <div class="elevator" >
-    <div class="elevator-box">
-      <div class="floor-indicator" [style.bottom.px]="currentFloor*25">
+  <div class="elevator-box">
+  
+      <!-- <input type="number" [(ngModel)]="currentFloor" min="0" max="10" step="1"> -->
+      <div class="floor-indicator" [style.bottom.px]="currentFloor * 25">
         {{ currentFloor }}
       </div>
-      <div class="elevator-doors">
-        <div class="down-arrow" *ngIf="currentFloor > 1" (click)="goToFloor(currentFloor - 1)">
-          &darr;
-        </div>
-        <div class="up-arrow" *ngIf="currentFloor < totalFloors" (click)="goToFloor(currentFloor + 1)">
-          &uarr;
-        </div>
-      </div>
-    </div>
+      <button (click)="getFloor()">Fetch Floor</button>
+
   </div>
+</div>
   

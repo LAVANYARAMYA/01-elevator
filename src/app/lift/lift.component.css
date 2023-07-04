@@ -30,25 +30,9 @@
   .elevator-doors {
     display: flex;
     justify-content: center;
-    align-items: center;
     /* height: 200px; */
     height: calc(100% - var(--floor-indicator-height));
   }
   
-  .up-arrow,
-  .down-arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  
-  .up-arrow {
-    margin-right: 10px;
-  }
-  
-  .down-arrow {
-    margin-left: 10px;
-  }
+ 
   

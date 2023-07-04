@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LiftOneComponent } from './lift-one.component';
+import LiftOneComponent from './lift-one.component';
 
 describe('LiftOneComponent', () => {
   let component: LiftOneComponent;
@@ -8,7 +8,7 @@ describe('LiftOneComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LiftOneComponent]
+      declarations: [LiftOneComponent],
     });
     fixture = TestBed.createComponent(LiftOneComponent);
     component = fixture.componentInstance;

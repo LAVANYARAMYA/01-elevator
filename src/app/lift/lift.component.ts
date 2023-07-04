@@ -6,12 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./lift.component.css']
 })
 export class LiftComponent {
-  currentFloor: number = 1; // Initial floor
-  totalFloors: number = 4; // Total number of floors
+  currentFloor: number = 0;
 
-  goToFloor(floor: number) {
-    if (floor >= 1 && floor <= this.totalFloors) {
-      this.currentFloor = floor;
+  getFloor() {
+    for (let i = 1; i <= 10; i++) {
+      
+      // Delay the loop to visualize the changes
+      setTimeout(() => {this.currentFloor = i;}, 1000 * i);
     }
   }
 

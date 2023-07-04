@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LiftComponent } from './lift/lift.component';
-import { LiftOneComponent } from './lift-one/lift-one.component';
+import LiftOneComponent from './lift-one/lift-one.component';
 import { DoorOpenCloseComponent } from './door-open-close/door-open-close.component';
 
 @NgModule({
@@ -12,13 +12,10 @@ import { DoorOpenCloseComponent } from './door-open-close/door-open-close.compon
     AppComponent,
     LiftComponent,
     LiftOneComponent,
-    DoorOpenCloseComponent
+    DoorOpenCloseComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
