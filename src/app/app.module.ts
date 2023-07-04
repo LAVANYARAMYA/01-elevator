@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LiftComponent } from './lift/lift.component';
 import LiftOneComponent from './lift-one/lift-one.component';
 import { DoorOpenCloseComponent } from './door-open-close/door-open-close.component';
+import { UseridComponent } from './userid/userid.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { DoorOpenCloseComponent } from './door-open-close/door-open-close.compon
     LiftComponent,
     LiftOneComponent,
     DoorOpenCloseComponent,
+    UseridComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

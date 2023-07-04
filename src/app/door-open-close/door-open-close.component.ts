@@ -6,10 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./door-open-close.component.css']
 })
 export class DoorOpenCloseComponent {
-  isOpen: boolean = false;
+  isOpen: any;
 
-  toggleDoor(): void {
-    this.isOpen = !this.isOpen;
+  toggleDoor(Open:boolean){
+    // console.log("****",Open);
+    // this.isOpen = Open;
+    // console.log(this.isOpen);
+  }
+
+  onButtonClicked(eventData: boolean) {
+    //console.log('Button clicked event:', eventData);
+    // Handle the event data here
+    this.isOpen=eventData;
   }
 
 }

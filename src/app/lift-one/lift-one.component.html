@@ -23,7 +23,12 @@
       <div  class="floor-indicator" [style.bottom.px]="currentFloor*25">
        
         {{ currentFloor }}
-        <app-door-open-close></app-door-open-close>
+        <div class="door" [ngClass]="{'open': isOpen}">
+          <div class="door-left"></div>
+          <div class="door-right"></div>
+          <!-- <div class="door-handle"></div> -->
+        </div>
+      
       </div>
 
     </div>
@@ -35,9 +40,14 @@
     <input type="text">
     <label>Enter the Password</label>
     <input type="password">
-    <button type="submit">Submit</button>
+    <!-- <button type="submit" (click)="ontoggleDoor()">Submit</button> -->
 
   </div>
+
+  
+  <app-userid (buttonClicked)="onButtonClicked($event)"></app-userid>
+
+  
 
 
 

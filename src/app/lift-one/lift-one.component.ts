@@ -1,5 +1,7 @@
-import { Component, Input, booleanAttribute } from '@angular/core';
+import { Component, EventEmitter, Input, Output, booleanAttribute } from '@angular/core';
 import { delay } from 'rxjs';
+//import { DoorOpenCloseComponent } from '../door-open-close/door-open-close.component';
+
 
 @Component({
   selector: 'app-lift-one',
@@ -8,10 +10,11 @@ import { delay } from 'rxjs';
 })
 export default class LiftOneComponent {
 
-  
   currentFloor: number = 1; // Initial floor
   totalFloors: number = 4; // Total number of floors
   isReached:boolean=false;
+
+  //constructor(private doorcomp: DoorOpenCloseComponent){}
   
 
   goToFloor(floor: number) {
@@ -50,6 +53,21 @@ export default class LiftOneComponent {
     }
    // console.log(this.currentFloor);
   }
+
+  isOpen: any;
+
+  toggleDoor(Open:boolean){
+    // console.log("****",Open);
+    // this.isOpen = Open;
+    // console.log(this.isOpen);
+  }
+
+  onButtonClicked(eventData: boolean) {
+    //console.log('Button clicked event:', eventData);
+    // Handle the event data here
+    this.isOpen=eventData;
+  }
+
 
   
  
