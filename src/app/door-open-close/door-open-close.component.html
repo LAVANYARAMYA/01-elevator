@@ -1,0 +1,16 @@
+<div class="door" [ngClass]="{'open': isOpen}">
+    <div class="door-left"></div>
+    <div class="door-right"></div>
+    <div class="door-handle"></div>
+  </div>
+
+  <div class="form" *ngIf="isOpen">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+  </div>
+  
+  <button (click)="toggleDoor()">Toggle Door</button>
+  
+  

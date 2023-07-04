@@ -1,0 +1,52 @@
+.door {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #ccc;
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .door-left,
+  .door-right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #ccc;
+  }
+  
+  .door-left {
+    left: 0;
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .door-right {
+    right: 0;
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .door-handle {
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    width: 20px;
+    height: 60px;
+    background-color: #333;
+    border-radius: 10px;
+  }
+  
+  .open {
+    transform: rotateY(90deg);
+  }
+  
+  .open .door-left {
+    transform: rotateY(-90deg);
+  }
+  
+  .open .door-right {
+    transform: rotateY(90deg);
+  }
+  
