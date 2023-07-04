@@ -1,10 +1,12 @@
-<!-- <div class="elevator" >
-    <div class="elevator-box">
-      <div class="floor-indicator" [style.bottom.px]="currentFloor*25">
+<div class="elevator" >
+  <div class="elevator-box">
+  
+      <!-- <input type="number" [(ngModel)]="currentFloor" min="0" max="10" step="1"> -->
+      <div class="floor-indicator" [style.bottom.px]="currentFloor * 25">
         {{ currentFloor }}
-        <app-door-open-close></app-door-open-close>
       </div>
-     
-    </div>
-  </div> -->
+      <button (click)="getFloor()">Fetch Floor</button>
+
+  </div>
+</div>
   
