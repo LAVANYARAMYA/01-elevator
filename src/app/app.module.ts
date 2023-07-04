@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LiftComponent } from './lift/lift.component';
+// import { LiftComponent } from './lift/lift.component';
 import { LiftOneComponent } from './lift-one/lift-one.component';
 import { DoorOpenCloseComponent } from './door-open-close/door-open-close.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LiftComponent,
+    // LiftComponent,
     LiftOneComponent,
     DoorOpenCloseComponent
   ],
