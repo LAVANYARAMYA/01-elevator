@@ -68,6 +68,11 @@ export default class LiftOneComponent {
     this.isOpen=eventData;
   }
 
+  ontoggleDoor(eventData: boolean)
+  {
+    this.isOpen=eventData;
+  }
+
 
   
  

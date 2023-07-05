@@ -8,9 +8,9 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class UseridComponent {
   @Output() buttonClicked: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-  ontoggleDoor()
+  ontoggleDoor(isTrue:boolean)
   {
-    this.buttonClicked.emit(true);
+    this.buttonClicked.emit(isTrue);
 
    
   }
