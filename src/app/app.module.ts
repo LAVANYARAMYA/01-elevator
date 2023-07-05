@@ -7,6 +7,7 @@ import { LiftComponent } from './lift/lift.component';
 import LiftOneComponent from './lift-one/lift-one.component';
 import { DoorOpenCloseComponent } from './door-open-close/door-open-close.component';
 import { UseridComponent } from './userid/userid.component';
+import { FnumberformComponent } from './fnumberform/fnumberform.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { UseridComponent } from './userid/userid.component';
     LiftOneComponent,
     DoorOpenCloseComponent,
     UseridComponent,
+    FnumberformComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

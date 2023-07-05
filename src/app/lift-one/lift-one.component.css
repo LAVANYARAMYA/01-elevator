@@ -6,6 +6,7 @@
     width: 150px;
     height: 250px;
     border: 1px solid #000;
+    justify-content: space-around;
 }
 .ele-system
 {
@@ -18,7 +19,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    width: 150px;
+    height: 250px;
   }
   
   .elevator-box {
@@ -111,5 +113,14 @@
   .open .door-right {
     transform: rotateY(90deg);
   }
+
+
+  .btn1
+  {
+     margin-right: 50px;
+  }
+
+
+  
   
   
