@@ -3,13 +3,13 @@
 <button [style.padding]="200"  (click)="goToFloor(4)">Down</button>
 
 <div class="first" [style.flex-direction]="">
-<button [style.padding]="200" (click)="goToFloor(3)">Up</button>
+<button class="btn1" (click)="goToFloor(3)">Up</button>
 <button [style.padding]="200" (click)="goToFloor(3)">Down</button>
 </div>
 
 
 <div class="first" [style.flex-direction]="">
-<button [style.padding]="200" (click)="goToFloor(2)">Up</button>
+<button class="btn1" (click)="goToFloor(2)">Up</button>
 <button [style.padding]="200" (click)="goToFloor(2)">Down</button>
 </div>
 
@@ -20,14 +20,47 @@
     <div class="elevator-box">
     
         <!-- <input type="number" [(ngModel)]="currentFloor" min="0" max="10" step="1"> -->
-      <div  class="floor-indicator" [style.bottom.px]="currentFloor*25">
+      <div  class="floor-indicator" [style.bottom.px]="currentFloor*35">
        
         {{ currentFloor }}
-        <app-door-open-close></app-door-open-close>
+        <div class="door" [ngClass]="{'open': isOpen}">
+          <div class="door-left"></div>
+          <div class="door-right"></div>
+          <!-- <div class="door-handle"></div> -->
+        </div>
+      
       </div>
 
     </div>
   </div>
+
+
+  <div *ngIf="isReached" class="getid">
+    <label>Enter the Id</label>
+    <input type="text">
+    <label>Enter the Password</label>
+    <input type="password">
+    <!-- <button type="submit" (click)="ontoggleDoor()">Submit</button> -->
+
+  </div>
+
+  
+  <app-userid (buttonClicked)="onButtonClicked($event)"></app-userid>
+
+
+
+  <div class="fnumberform" *ngIf="isReached">
+    <button (click)="goToFloor(1)">1</button>
+    <button (click)="goToFloor(2)">2</button>
+    <button (click)="goToFloor(3)">3</button>
+    <button (click)="goToFloor(4)">4</button>
+    <button >fan</button>
+    <button >alarm</button>
+    <button >emergrncy</button>
+
+</div>
+
+  
 
 
 

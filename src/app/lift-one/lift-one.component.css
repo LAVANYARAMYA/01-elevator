@@ -6,6 +6,7 @@
     width: 150px;
     height: 250px;
     border: 1px solid #000;
+    justify-content: space-around;
 }
 .ele-system
 {
@@ -18,7 +19,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    width: 150px;
+    height: 250px;
   }
   
   .elevator-box {
@@ -67,4 +69,58 @@
   .down-arrow {
     margin-left: 10px;
   }
+
+  .door {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .door-left,
+  .door-right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-color: #ccc;
+  }
+  
+  .door-left {
+    left: 0;
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .door-right {
+    right: 0;
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  
+  
+  .open {
+    transform: rotateY(90deg);
+  }
+  
+  .open .door-left {
+    transform: rotateY(-90deg);
+  }
+  
+  .open .door-right {
+    transform: rotateY(90deg);
+  }
+
+
+  .btn1
+  {
+     margin-right: 50px;
+  }
+
+
+  
+  
   
